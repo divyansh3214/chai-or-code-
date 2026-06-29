@@ -44,3 +44,9 @@ console.log(Object.keys(obj));//returns an array of the object's own enumerable 
 console.log(Object.values(obj));//returns an array of the object's own enumerable property values
 console.log(Object.entries(obj));//returns an array of the object's own enumerable property [key, value] pairs
 console.log(obj.hasOwnProperty("name"));//returns a boolean indicating whether the object has the specified property as its own property (as opposed to inheriting it)
+
+
+const {name}=obj;//destructuring assignment to extract the name property from obj
+console.log(name);
+const {address:{city}}=obj;//destructuring assignment to extract the city property from the nested address object in obj
+console.log(city);
