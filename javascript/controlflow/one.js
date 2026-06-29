@@ -12,4 +12,4 @@ switch(key){
 const empty={};
 let d=Object.keys(empty).length;
 let val1;
-val1=null ??'default value';
+val1=null ??'default value'??10;//null is falsy so it will return 'default value'
