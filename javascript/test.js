@@ -41,3 +41,9 @@ mydate.toLocaleDateString('default',
         day: 'numeric'
     }
 );
+const array=[1,2,3,4,5];
+console.log(array.slice(1,3));
+console.log(array.includes(3));
+console.log(array.indexOf(3));
+const array2=array.join();//string 
+// note splice deletes a section on original array while slice does not
