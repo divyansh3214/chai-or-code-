@@ -7,3 +7,8 @@ console.table([
   { name: 'Charlie', age: 35, city: 'Chicago' }
 ]);
 console.table([typeof state, state]);
+let val="33";
+let val2=Number(val);
+console.table([typeof val2, val2]);
+let stringnumber=Number("33");
+console.table([typeof stringnumber, stringnumber]);
