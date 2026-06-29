@@ -24,3 +24,20 @@ const myFunction= function() {
   console.log(obj1.name);
 }
 console.log(myFunction());
+console.log(`The name is ${obj1.name}`);
+const hell="Hello, World!";
+console.log(hell.indexOf("World"));
+const url="https://www.exa%20mple.com";
+console.log(url.replace('%20','-'));
+let mydate=new Date();
+console.log(mydate.toDateString());
+console.log(mydate.toTimeString());
+console.log(mydate.toISOString());
+mydate.toLocaleDateString('default',
+    {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+    }
+);
