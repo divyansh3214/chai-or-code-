@@ -12,3 +12,6 @@ let val2=Number(val);
 console.table([typeof val2, val2]);
 let stringnumber=Number("33");
 console.table([typeof stringnumber, stringnumber]);
+const id=Symbol('123');
+const id2=Symbol('123');
+console.table([id===id2]);
