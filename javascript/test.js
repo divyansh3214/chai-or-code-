@@ -12,6 +12,15 @@ let val2=Number(val);
 console.table([typeof val2, val2]);
 let stringnumber=Number("33");
 console.table([typeof stringnumber, stringnumber]);
-const id=Symbol('123');
-const id2=Symbol('123');
-console.table([id===id2]);
+//const id=Symbol('123');
+//const id2=Symbol('123');
+//console.table([id===id2]);
+const obj1={name:"Alice"};
+const obj2={name:"Alice"};
+console.table([obj1===obj2]);
+const array=[1,2,3];
+console.table([array[0], array[1], array[2]]);
+const myFunction= function() {
+  console.log(obj1.name);
+}
+console.log(myFunction());
