@@ -47,3 +47,13 @@ console.log(array.includes(3));
 console.log(array.indexOf(3));
 const array2=array.join();//string 
 // note splice deletes a section on original array while slice does not
+const array3=array.concat([6,7,8]);
+console.log(array2);
+console.log(array3);
+const all_new_values=[...array, ...array3];
+console.log(all_new_values);
+const another_array=[1,2,3,4,5,[6,7,8],[9,10,11,[12,13]]];
+const real_array=another_array.flat(infinity);
+//note that flat() method is used to flatten an array of arrays into a single array. The argument passed to flat() specifies the depth level to which the array should be flattened. In this case, we are using infinity to flatten all levels of nested arrays.
+console.log(Array.isArray(real_array));
+console.log(Array.from("hitesh"));
