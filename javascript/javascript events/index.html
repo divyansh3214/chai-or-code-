@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Image Events Demo</title>
+  <style>
+    #images img {
+      width: 200px;
+      margin: 10px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    #images img:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <ul id="images">
+    <li><img id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+    <li><img id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="japan"></li>
+    <li><img id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="river"></li>
+    <li><img id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="owl"></li>
+    <li><img id="prayer" src="https://images.pexels.com/photos/3532554/pexels-photo-3532554.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="prayer"></li>
+  </ul>
+
+  <script>
+   const looping=document.querySelectorAll('#images img');
+   looping.forEach((loops)=>{
+      loops.addEventListener('click',()=>{
+        alert(`you have clicked on ${loops.alt} image`);
+      })
+   })
+  </script>
+</body>
+</html>
