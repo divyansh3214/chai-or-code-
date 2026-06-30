@@ -27,10 +27,23 @@
   <script>
    const looping=document.querySelectorAll('#images img');
    looping.forEach((loops)=>{
-      loops.addEventListener('click',()=>{
-        alert(`you have clicked on ${loops.alt} image`);
-      })
+      loops.addEventListener('click',(e)=>{
+        alert(`you have clicked on ${e.target.alt} image`);
+        loops.stopPropagation();
+      },false)
    })
+
+   document.getElementById('google').addEventListener('click',(e)=>{
+    console.log("clicked on google link");
+    e.preventDefault();
+    e.stopPropagation();
+   },false)
+
+   //type , timestamp, defaultprevented, target, currentTarget, eventPhase, bubbles, cancelable, composed, isTrusted,sourseCapabilities, path, returnValue, srcElement, timeStamp, type 
+   document.querySelector('#images').addEventListener('click',(e)=>{
+    let remove=e.target.parentNode;
+    remove.remove();
+   },false)
   </script>
 </body>
 </html>
