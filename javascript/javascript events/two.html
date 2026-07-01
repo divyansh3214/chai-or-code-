@@ -12,10 +12,12 @@
     <script>
      document.getElementById("btn").addEventListener("click",()=>{
         console.log("Button clicked! Waiting 2 seconds...");
-        setTimeout(()=>{
+       const changeme = setTimeout(()=>{
           console.log("divyansh");
        },2000);
+       clearTimeout(changeme);
      });
+     document.querySelector("h1").innerHTML="best chai";    
     </script>       
 </body>
 </html>
