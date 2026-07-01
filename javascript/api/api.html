@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0    ">
+    <title>JavaScript API Documentation</title> 
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <script>
+        const url='https://api.github.com/users/hiteshchoudhary'
+        const req=new XMLHttpRequest()//class make its object
+        req.open('GET',url)//open is a method of XMLHttpRequest that initializes a request. It takes two parameters: the HTTP method (GET, POST, etc.) and the URL to which the request is sent. In this case, it is a GET request to the specified URL.
+        req.onreadystatechange=()=>{//onreadystatechange is a property of XMLHttpRequest that is called whenever the readyState attribute changes. It is used to handle the response from the server. requires function to be called when the readyState changes
+            console.log(req.readyState)
+            if(req.readyState==4 && req.status==200){//readyState 4 means the request is done and status 200 means the request was successful
+                const data=JSON.parse(req.responseText)//responseText is a property of XMLHttpRequest that contains the response data as a string. It is used to access the response data from the server. JSON.parse() is a method that parses a JSON string and converts it into a JavaScript object.
+                console.log(data.followers )//log the parsed data
+            }
+        }
+        req.send(); 
+    </script>
+</body>
+</html>
